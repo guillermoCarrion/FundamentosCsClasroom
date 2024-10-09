@@ -11,6 +11,14 @@ class Estudiante
         calificaciones = new Dictionary<Asignatura, double>();
     }
 
+
+    public void MostrarAsignaturas(){
+        Console.WriteLine($"\n--- Asignaturas de {Nombre} ---");
+        foreach (var entrada in calificaciones)
+        {
+            Console.WriteLine($"{entrada.Key.Nombre}");
+        }
+    }
     public void AñadirCalificacion(Asignatura asignatura, double calificacion)
     {
         calificaciones[asignatura] = calificacion;

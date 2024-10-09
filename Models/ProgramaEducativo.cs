@@ -6,10 +6,14 @@ class ProgramaEducativo
     private List<Estudiante> estudiantes;
     
 
+
+
     public ProgramaEducativo()
     {
         estudiantes = new List<Estudiante>();
     }
+
+
 
     public void AñadirEstudiante(Estudiante estudiante)
     {
@@ -25,6 +29,9 @@ class ProgramaEducativo
             }
     }
 
+
+
+
     public void MostrarEstudiantes()
     {
         Console.WriteLine("\n--- Lista de Estudiantes ---");
@@ -33,6 +40,10 @@ class ProgramaEducativo
             Console.WriteLine($"Estudiante: {estudiante.Nombre}");
         }
     }
+
+
+
+
 
     public Estudiante ObtenerEstudiante(string nombre)
     {
@@ -46,11 +57,17 @@ class ProgramaEducativo
         return null;
     }
 
+
+
+
     public List<Estudiante> BuscarEstudiantesPorNombre(string parteDelNombre)
     {
         List<Estudiante> resultados = estudiantes.FindAll(e => e.Nombre.ToLower().Contains(parteDelNombre.ToLower()));
         return resultados;
     }
+
+
+
 
     public void EliminarEstudiante(string nombre)
     {
@@ -84,6 +101,7 @@ class ProgramaEducativo
     public void GenerarReporteEstudiante(Estudiante estudiante)
     {
         Console.WriteLine($"\n--- Reporte para {estudiante.Nombre} ---");
+        estudiante.MostrarAsignaturas();
         estudiante.MostrarCalificaciones();
         double promedio = estudiante.CalcularPromedio();
         Console.WriteLine($"Promedio final: {promedio:F2}");
