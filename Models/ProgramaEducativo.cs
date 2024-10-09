@@ -4,15 +4,29 @@ namespace Models;
 class ProgramaEducativo
 {
     private List<Estudiante> estudiantes;
-    
+    private List<Asignatura> asignaturas;
 
 
 
     public ProgramaEducativo()
     {
         estudiantes = new List<Estudiante>();
+        asignaturas = new List<Asignatura>();
     }
 
+
+    public void AñadirAsigantura (Asignatura asignatura){
+        if (estudiantes.Exists(e => e.Nombre == asignatura.Nombre))
+            {
+                Console.WriteLine($"La asignatura {asignatura.Nombre} ya existe en el programa.");
+            }
+            else
+            {
+                // Añadir la asignatura a la lista global
+                asignaturas.Add(asignatura);
+                Console.WriteLine($"La asignatura {asignatura.Nombre} ha sido añadida.");
+            }
+    }
 
 
     public void AñadirEstudiante(Estudiante estudiante)
@@ -25,7 +39,7 @@ class ProgramaEducativo
             {
                 // Añadir la asignatura a la lista global
                 estudiantes.Add(estudiante);
-                Console.WriteLine($"El estudiante {estudiante.Nombre} con ha sido añadido.");
+                Console.WriteLine($"El estudiante {estudiante.Nombre} ha sido añadido.");
             }
     }
 
@@ -105,6 +119,16 @@ class ProgramaEducativo
         estudiante.MostrarCalificaciones();
         double promedio = estudiante.CalcularPromedio();
         Console.WriteLine($"Promedio final: {promedio:F2}");
+    }
+
+
+    // ordenar estudiantes por nota
+    public void MostrarRankingPorNotas (){
+        estudiantes.Sort((e1, e2) =>e2.CalcularPromedio().CompareTo(e1.CalcularPromedio()));
+        Console.WriteLine($"\n Ranking de alumnos");
+        foreach(var estudadiante in estudiantes){
+            Console.WriteLine(estudadiante.Nombre + ": " + estudadiante.CalcularPromedio() );
+        }
     }
 
 }

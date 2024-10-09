@@ -21,7 +21,11 @@ class Estudiante
     }
     public void AñadirCalificacion(Asignatura asignatura, double calificacion)
     {
-        calificaciones[asignatura] = calificacion;
+        if(calificacion<=10 && calificacion>=0){
+            calificaciones[asignatura] = calificacion;
+        }else{
+            Console.WriteLine("La nota no es valida");
+        }
     }
 
     public void MostrarCalificaciones()
