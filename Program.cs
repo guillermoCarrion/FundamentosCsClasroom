@@ -21,7 +21,7 @@ programa.AñadirEstudiante(estudiante3);
 
 // Asignar calificaciones
 estudiante1.AñadirCalificacion(servidor, 9.5);
-estudiante3.AñadirCalificacion(servidor, 6);
+estudiante3.AñadirCalificacion(servidor, 12);
 
 // Mostrar estudiantes
 programa.MostrarEstudiantes();
