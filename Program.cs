@@ -62,3 +62,6 @@ programa.MostrarRankingPorNotas();
 
 //Lista de riesgo suspenso
 programa.ListaDeRiesgo();
+
+//Mostrar asignaturas
+programa.MostrarAsignaturas();

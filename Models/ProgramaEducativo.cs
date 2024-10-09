@@ -142,4 +142,13 @@ class ProgramaEducativo
         }
     }
 
+    // Mostrar asignaturas
+    public void MostrarAsignaturas()
+    {
+        Console.WriteLine("\n--- Lista de Asignaturas ---");
+        foreach (var asignatura in asignaturas)
+        {
+            Console.WriteLine($"Nombre de la asignatura: {asignatura.Nombre}   Creditos: {asignatura.Creditos}");
+        }
+    }
 }
