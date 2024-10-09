@@ -121,4 +121,14 @@ class ProgramaEducativo
         Console.WriteLine($"Promedio final: {promedio:F2}");
     }
 
+
+    // ordenar estudiantes por nota
+    public void MostrarRankingPorNotas (){
+        estudiantes.Sort((e1, e2) =>e2.CalcularPromedio().CompareTo(e1.CalcularPromedio()));
+        Console.WriteLine($"\n Ranking de alumnos");
+        foreach(var estudadiante in estudiantes){
+            Console.WriteLine(estudadiante.Nombre + ": " + estudadiante.CalcularPromedio() );
+        }
+    }
+
 }

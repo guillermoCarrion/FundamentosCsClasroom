@@ -56,3 +56,6 @@ Console.WriteLine("Promedio de los estudiantes: " + programa.CalcularPromedioGlo
 
 // Informe estudiante
 programa.GenerarReporteEstudiante(estudiante1);
+
+// Ranking por nota
+programa.MostrarRankingPorNotas();
