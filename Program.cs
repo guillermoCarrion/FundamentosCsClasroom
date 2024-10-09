@@ -8,10 +8,12 @@ Asignatura servidor = new Asignatura("Servidor", 6);
 // Crear estudiantes
 Estudiante estudiante1 = new ("Guillermo");
 Estudiante estudiante2 = new ("Guillermoss");
+Estudiante estudiante3 = new ("Guille");
 
 // Añadir estudiantes al programa educativo
 programa.AñadirEstudiante(estudiante1);
 programa.AñadirEstudiante(estudiante2);
+programa.AñadirEstudiante(estudiante3);
 
 // Asignar calificaciones
 estudiante1.AñadirCalificacion(servidor, 9.5);
@@ -24,6 +26,14 @@ estudiante1.ModificarCalificacion(servidor, 9.8);
 
 //Eliminar estudadiante
 programa.EliminarEstudiante("Guillermoss");
+
+//Buscar estudiantes por parte del nombre
+List<Estudiante> busqueda = programa.BuscarEstudiantesPorNombre("Guille");
+  Console.WriteLine("\n--- Estudiantes filtrado por nombre ---");
+        foreach (var res in busqueda)
+        {
+            Console.WriteLine($"Estudiante: {res.Nombre}");
+        }
 
 // Mostrar calificaciones de un estudiante específico
 Estudiante estudianteSeleccionado = programa.ObtenerEstudiante("Guillermo");
