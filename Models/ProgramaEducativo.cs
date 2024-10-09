@@ -131,4 +131,15 @@ class ProgramaEducativo
         }
     }
 
+    //Listar alumnos en riesgo de suspenso
+    public void ListaDeRiesgo (){
+        Console.WriteLine($"\n Lista de riesgo de reprobar");
+        foreach (var estudiante in estudiantes)
+        {
+            if(estudiante.CalcularPromedio()<5){
+                Console.WriteLine(estudiante.Nombre + ": " + estudiante.CalcularPromedio());
+            }
+        }
+    }
+
 }

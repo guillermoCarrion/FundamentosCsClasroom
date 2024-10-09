@@ -59,3 +59,6 @@ programa.GenerarReporteEstudiante(estudiante1);
 
 // Ranking por nota
 programa.MostrarRankingPorNotas();
+
+//Lista de riesgo suspenso
+programa.ListaDeRiesgo();
