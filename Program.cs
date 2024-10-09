@@ -5,6 +5,10 @@ ProgramaEducativo programa = new ProgramaEducativo();
 // Crear asignaturas
 Asignatura servidor = new Asignatura("Servidor", 6);
 
+// Añadir asignaturas al programa
+programa.AñadirAsigantura(servidor);
+
+
 // Crear estudiantes
 Estudiante estudiante1 = new ("Guillermo");
 Estudiante estudiante2 = new ("Guillermoss");
