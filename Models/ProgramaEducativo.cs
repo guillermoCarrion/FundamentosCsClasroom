@@ -131,4 +131,24 @@ class ProgramaEducativo
         }
     }
 
+    //Listar alumnos en riesgo de suspenso
+    public void ListaDeRiesgo (){
+        Console.WriteLine($"\n Lista de riesgo de reprobar");
+        foreach (var estudiante in estudiantes)
+        {
+            if(estudiante.CalcularPromedio()<5){
+                Console.WriteLine(estudiante.Nombre + ": " + estudiante.CalcularPromedio());
+            }
+        }
+    }
+
+    // Mostrar asignaturas
+    public void MostrarAsignaturas()
+    {
+        Console.WriteLine("\n--- Lista de Asignaturas ---");
+        foreach (var asignatura in asignaturas)
+        {
+            Console.WriteLine($"Nombre de la asignatura: {asignatura.Nombre}   Creditos: {asignatura.Creditos}");
+        }
+    }
 }
