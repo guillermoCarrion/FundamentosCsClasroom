@@ -48,3 +48,7 @@ if (estudianteSeleccionado != null)
 
 // Calcular promedio de estudiantes
 Console.WriteLine("Promedio de los estudiantes: " + programa.CalcularPromedioGlobal());
+
+
+// Informe estudiante
+programa.GenerarReporteEstudiante(estudiante1);

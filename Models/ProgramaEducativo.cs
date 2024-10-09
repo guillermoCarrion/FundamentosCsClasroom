@@ -101,6 +101,7 @@ class ProgramaEducativo
     public void GenerarReporteEstudiante(Estudiante estudiante)
     {
         Console.WriteLine($"\n--- Reporte para {estudiante.Nombre} ---");
+        estudiante.MostrarAsignaturas();
         estudiante.MostrarCalificaciones();
         double promedio = estudiante.CalcularPromedio();
         Console.WriteLine($"Promedio final: {promedio:F2}");
