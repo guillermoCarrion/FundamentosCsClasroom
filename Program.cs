@@ -17,6 +17,7 @@ programa.AñadirEstudiante(estudiante3);
 
 // Asignar calificaciones
 estudiante1.AñadirCalificacion(servidor, 9.5);
+estudiante3.AñadirCalificacion(servidor, 6);
 
 // Mostrar estudiantes
 programa.MostrarEstudiantes();
@@ -44,3 +45,6 @@ if (estudianteSeleccionado != null)
     Console.WriteLine($"Promedio de {estudianteSeleccionado.Nombre}: {promedio:F2}");
 }
 
+
+// Calcular promedio de estudiantes
+Console.WriteLine("Promedio de los estudiantes: " + programa.CalcularPromedioGlobal());
